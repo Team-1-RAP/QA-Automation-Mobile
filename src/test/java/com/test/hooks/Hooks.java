@@ -36,10 +36,10 @@ public class Hooks extends BaseStep {
         caps.setCapability("platformName", "Android");
         caps.setCapability("platformVersion", "14");
         caps.setCapability("udid", "293a1ecd7d76");
-        caps.setCapability("app", new File(System.getProperty("user.dir")
-                + "/src/test/resources/apk/apk-demo/saucedemo.apk").getAbsolutePath());
-        caps.setCapability("appPackage", "com.swaglabsmobileapp");
-        caps.setCapability("appActivity", "com.swaglabsmobileapp.MainActivity");
+//        caps.setCapability("app", new File(System.getProperty("user.dir")
+//                + "/src/test/resources/apk/apk-demo/SimpleBank.apk").getAbsolutePath());
+        caps.setCapability("appPackage", "com.team1.simplebank");
+        caps.setCapability("appActivity", "com.team1.simplebank.ui.splash.SplashActivity");
         caps.setCapability("automationName","UiAutomator2");
         caps.setCapability("autoGrantPermissions",true);
         caps.setCapability("noReset", true);

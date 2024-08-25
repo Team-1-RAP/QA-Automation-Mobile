@@ -22,6 +22,7 @@ public class TestStep {
     @Given("User opens the apps")
     public void openApp() throws Exception {
         TestPage testPage = new TestPage(driver);
+        Thread.sleep(5000);
         testPage.onHomePage();
     }
 
