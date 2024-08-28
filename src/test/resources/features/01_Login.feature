@@ -1,5 +1,5 @@
 @regression @login
-Feature: Login
+Feature: 01 Login
 
   Scenario: User access Lupa Password
     Given The user open Simple Bank apps
