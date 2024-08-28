@@ -293,4 +293,14 @@ public class BasePage {
         }
     }
 
+    static HashMap<String,String> value = new HashMap<>();
+
+    public static void putValue(String key, MobileElement element){
+        value.put(key,element.getText());
+    }
+
+    public static String getValue(String key){
+        return value.get(key);
+    }
+
 }

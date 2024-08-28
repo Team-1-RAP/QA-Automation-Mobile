@@ -20,6 +20,12 @@ public class HomeStep {
         this.driver = Hooks.driver;
     }
 
+    @And("On Home page, The user click {string} menu")
+    public void clickMenuInHome(String menu) throws Exception {
+        HomePage homePage = new HomePage(driver);
+        homePage.clickMenuInHome(menu);
+    }
+
     @And("On Home page, The user verify balance is hide")
     public void balanceIsHide() throws Exception {
         HomePage homePage = new HomePage(driver);

@@ -20,6 +20,9 @@ public class HomePage extends BasePage {
     @AndroidFindBy(accessibility = "Profil")
     MobileElement profileMenu;
 
+    @AndroidFindBy(xpath = "//*[@text=\"Transfer\"]")
+    MobileElement transferMenu;
+
     @AndroidFindBy(id = "com.team1.simplebank:id/number_account_2")
     MobileElement numberAccount;
 
@@ -34,6 +37,30 @@ public class HomePage extends BasePage {
 
     public HomePage(AndroidDriver<AndroidElement> driver) {
         super(driver);
+    }
+
+    public void clickMenuInHome(String menu){
+        MobileElement menuElement;
+        switch (menu){
+            case "Beranda":
+                menuElement = berandaMenu;
+                break;
+            case "Transfer":
+                menuElement = transferMenu;
+                break;
+            case "Mutasi":
+                menuElement = mutasiMenu;
+                break;
+            case "Qris":
+                menuElement = qrisMenu;
+                break;
+            case "Profil":
+                menuElement = profileMenu;
+                break;
+            default:
+                throw new IllegalArgumentException("menu " + menu + " not found");
+        }
+        menuElement.click();
     }
 
     public void clickIconInHome(String icon){
