@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         },
         features = {"src/test/resources/features"},
         plugin = {"json:target/cucumber.json"},
-        tags = "@login"
+        tags = "@regression"
 )
 public class RunCukesTest {
 
